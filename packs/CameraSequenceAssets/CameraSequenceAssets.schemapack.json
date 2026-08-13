@@ -1,0 +1,139 @@
+{
+  "$schema": "hycreator-schema-pack",
+  "formatVersion": 1,
+  "mod": {
+    "id": "CameraSequenceAssets",
+    "name": "CameraSequenceAssets",
+    "version": "1.1.0",
+    "gameVersions": ">=0.6.0-pre.11 <0.7.0",
+    "author": "Lordimass"
+  },
+  "exportedBy": "HyCreator",
+  "exportedAt": "2026-08-13T20:59:12Z",
+  "kinds": [
+    {
+      "className": "CameraSequenceAsset",
+      "path": "CameraSequence",
+      "ext": ".json",
+      "fields": [
+        {
+          "name": "Keyframes",
+          "vtype": "array",
+          "iinto": "CameraKeyframe",
+          "required": false
+        },
+        {
+          "name": "BaseFov",
+          "vtype": "number",
+          "required": false
+        },
+        {
+          "name": "HideUi",
+          "vtype": "boolean",
+          "required": false,
+          "doc": "Whether the rest of the UI should be hidden while the effect is playing."
+        },
+        {
+          "name": "Id",
+          "vtype": "string",
+          "doc": "The asset's id — the file stem by default; stores accept it written inline too."
+        },
+        {
+          "name": "Parent",
+          "vtype": "string",
+          "doc": "Inherit every field from another asset of this store, then override what this file sets."
+        }
+      ]
+    }
+  ],
+  "defs": {
+    "CameraKeyframe": [
+      {
+        "name": "Id",
+        "vtype": "string",
+        "required": true,
+        "vals": [
+          "Keyframe",
+          "KeyframeLookingAt"
+        ],
+        "doc": "Which registered CameraKeyframe variant this object is — the codec map's discriminator."
+      },
+      {
+        "name": "Position",
+        "vtype": "object",
+        "required": false,
+        "into": "Vector3dUtil",
+        "doc": "The position the camera should have moved to by the end of this keyframe."
+      },
+      {
+        "name": "Duration",
+        "vtype": "number",
+        "required": false,
+        "doc": "The length of time this keyframe should take, in seconds."
+      },
+      {
+        "name": "Easing",
+        "vtype": "string",
+        "required": false,
+        "vals": [
+          "Linear",
+          "QuadIn",
+          "QuadOut",
+          "QuadInOut",
+          "CubicIn",
+          "CubicOut",
+          "CubicInOut",
+          "QuartIn",
+          "QuartOut",
+          "QuartInOut",
+          "QuintIn",
+          "QuintOut",
+          "QuintInOut",
+          "SineIn",
+          "SineOut",
+          "SineInOut",
+          "ExpoIn",
+          "ExpoOut",
+          "ExpoInOut",
+          "CircIn",
+          "CircOut",
+          "CircInOut",
+          "ElasticIn",
+          "ElasticOut",
+          "ElasticInOut",
+          "BackIn",
+          "BackOut",
+          "BackInOut",
+          "BounceIn",
+          "BounceOut",
+          "BounceInOut"
+        ],
+        "doc": "The type of camera easing that should be used."
+      },
+      {
+        "name": "Fov",
+        "vtype": "number",
+        "required": false,
+        "doc": "The FOV the camera should have moved to by the end of this keyframe."
+      },
+      {
+        "name": "RelativeToPlayer",
+        "vtype": "boolean",
+        "required": false,
+        "doc": "Whether the position and rotation should be relative to the player's current view, or global."
+      },
+      {
+        "name": "Look",
+        "vtype": "object",
+        "required": false,
+        "into": "Rotation3f"
+      },
+      {
+        "name": "LookAtPoint",
+        "vtype": "object",
+        "required": false,
+        "into": "Vector3dUtil"
+      }
+    ]
+  }
+}

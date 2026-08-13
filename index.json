@@ -1,0 +1,30 @@
+{
+  "$schema": "hycreator-schema-pack-index",
+  "formatVersion": 1,
+  "packs": [
+    {
+      "id": "CameraSequenceAssets",
+      "name": "Camera Sequence Assets",
+      "description": "Camera sequences (cutscenes) as assets — configured in the editor or JSON, played back with /camerasequence, /cinematic or a Trigger Camera Sequence volume.",
+      "modUrl": "https://github.com/Lordimass/hytale-camera-sequence-asset",
+      "modVersion": "1.1.0",
+      "gameVersions": ">=0.6.0-pre.11 <0.7.0",
+      "kinds": 1,
+      "path": "packs/CameraSequenceAssets/CameraSequenceAssets.schemapack.json",
+      "author": "Lordimass",
+      "exportedAt": "2026-08-13T20:59:12Z"
+    },
+    {
+      "id": "Alec's Tamework!",
+      "name": "Alec's Tamework!",
+      "description": "Alec's taming framework — companions, mounts, breeding, capture and husbandry systems for NPCs.",
+      "modVersion": "3.1.4",
+      "gameVersions": ">=0.5.7 <0.7.0 || >=0.6.0-pre.1 <0.6.0",
+      "kinds": 26,
+      "path": "packs/AlecsTamework/AlecsTamework.schemapack.json",
+      "modUrl": "https://github.com/Alechilles/AlecsTamework",
+      "author": "Alechilles",
+      "exportedAt": "2026-08-13T20:59:12Z"
+    }
+  ]
+}
